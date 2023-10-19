@@ -241,6 +241,11 @@
       "inline": [
         "rm -rf {{user `working_dir`}}"
       ]
+    },
+    {
+      "type": "shell",
+      "remote_folder": "{{ user `remote_folder`}}",
+      "script": "{{template_dir}}/scripts/gather_sfu.sh"
     }
   ],
   "post-processors": [

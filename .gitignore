@@ -5,3 +5,5 @@
 .DS_Store
 site/
 .git-commit
+Session.vim
+.envrc
