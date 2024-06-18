@@ -6,7 +6,7 @@ orbs:
   aws-cli: circleci/aws-cli@4.1.1
 
 jobs:
-  build-sfu-ami:
+  build-ami:
     parameters:
       packer_version:
         type: string
@@ -46,7 +46,7 @@ jobs:
             packer version
             packer plugins install github.com/hashicorp/amazon
       - run:
-          name: create SFU EKS AMI using packer
+          name: create EKS AMI using packer
           command: |
             export USER="CircleCI"
             make k8s kubernetes_version=<<parameters.kubernetes_version>> \
@@ -58,7 +58,7 @@ jobs:
 workflows:
   build:
     jobs:
-      - build-sfu-ami:
+      - build-ami:
           kubernetes_version: "1.27.12"
           kubernetes_build_date: "2024-04-19"
           instance_type: c5a.xlarge
