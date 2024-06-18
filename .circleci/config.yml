@@ -61,10 +61,11 @@ workflows:
       - build-sfu-ami:
           kubernetes_version: "1.27.12"
           kubernetes_build_date: "2024-04-19"
-          instance_type: c6a.xlarge
-          ami_preffix: gather-sfu-eks
+          instance_type: c5a.xlarge
+          ami_preffix: gather-dhub-proxy
           filters:
             branches:
               only:
                 - main
                 - staging
+                - panagiotis/ap-southeast-dockerhub-proxy
