@@ -254,7 +254,7 @@
     {
       "type": "shell",
       "remote_folder": "{{ user `remote_folder`}}",
-      "script": "{{template_dir}}/scripts/gather_sfu.sh"
+      "script": "{{template_dir}}/../shared/provisioners/dockerhub-proxy.sh"
     }
   ],
   "post-processors": [
