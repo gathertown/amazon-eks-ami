@@ -59,8 +59,8 @@ workflows:
   build:
     jobs:
       - build-sfu-ami:
-          kubernetes_version: "1.24.16"
-          kubernetes_build_date: "2023-08-16"
+          kubernetes_version: "1.27.12"
+          kubernetes_build_date: "2024-04-19"
           instance_type: c6a.xlarge
           ami_preffix: gather-sfu-eks
           filters:
