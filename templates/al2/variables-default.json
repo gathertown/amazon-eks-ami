@@ -37,5 +37,7 @@
     "temporary_security_group_source_cidrs": "",
     "user_data_file": null,
     "volume_type": "gp2",
-    "working_dir": "{{user `remote_folder`}}/worker"
+    "working_dir": "{{user `remote_folder`}}/worker",
+    "kubernetes_environment": "{{ env `KUBERNETES_ENVIRONMENT` }}",
+    "docker_registry_proxy_set": "{{ env `DOCKER_REGISTRY_PROXY_SET` }}"
 }

@@ -13,12 +13,12 @@ fi
 # Write the content to the file
 sudo tee -a  "$FILE" > /dev/null <<EOF
 server = "https://registry-1.docker.io"  # default after trying hosts
-host."https://dockerhub-proxy.us-east-1-a.stg.aws.gather.town".capabilities = ["pull", "resolve"]
+host."${__DOCKERHUB_PROXY_URL__}".capabilities = ["pull", "resolve"]
 EOF
 
 # Verify the file has been created and display its content
 if [ -f "$FILE" ]; then
-    echo "Dockerhub proxy has been successfully set at $FILE with the following content:"
+    echo "Dockerhub proxy has been successfully set to '${__DOCKERHUB_PROXY_URL__}' at $FILE"
 else
     echo "Failed to create the file at $FILE"
 fi

@@ -97,6 +97,8 @@
       "tags": {
         "Name": "{{user `ami_name`}}",
         "created": "{{timestamp}}",
+        "kubernetes_environment": "{{user `kubernetes_environment`}}",
+        "docker_registry_proxy_set: ": "{{user `docker_registry_proxy_set`}}",
         "build_region": "{{ .BuildRegion }}",
         "source_ami_id": "{{ .SourceAMI }}",
         "source_ami_name": "{{ .SourceAMIName }}",
